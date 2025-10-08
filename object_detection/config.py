@@ -21,3 +21,6 @@ class Config:
     # File types
     IMAGE_EXTENSIONS = (".jpg", ".jpeg", ".png")
     VIDEO_EXTENSIONS = (".mp4", ".avi", ".mov")
+
+    # Detection settings
+    CONF_THRESHOLD = 0.5  # Ngưỡng confidence để tăng độ chính xác, giảm nhận nhầm
