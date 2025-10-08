@@ -35,7 +35,7 @@ class CameraHandler:
         frame = self.get_frame()
         if frame is not None:
             start = time.time()
-            results = model(frame)
+            results = model(frame, conf=Config.CONF_THRESHOLD)  # Áp dụng ngưỡng confidence
             annotated = results[0].plot()
             fps = 1 / (time.time() - start + Config.MIN_FPS)
             img = cv2.cvtColor(annotated, cv2.COLOR_BGR2RGB)
